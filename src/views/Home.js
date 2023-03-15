@@ -2,8 +2,10 @@ const Home = () => {
 
     return(
 <div>
-    <div className="text-center m-4 p-4">
-    <h1>Hola mundo del home!</h1>
+    <div 
+    style={{ borderRadius: '5px' }}
+    className="text-center m-4 p-4 border border-dark shadow-lg">
+    <h1>Hello world from home!</h1>
     </div>
 
 </div>

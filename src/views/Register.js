@@ -4,7 +4,9 @@ const Register = () => {
 
     return (
         <div className="container mt-4">
-            <div className="border border-dark shadow-lg m-4">
+            <div 
+            style={{ borderRadius: '5px' }}
+            className="border border-dark shadow-lg m-4">
                 <div className="m-4">
                     <form>
                         <div className="row d-flex justify-content-around p-2">
