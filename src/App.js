@@ -9,6 +9,7 @@ import Home from "./views/Home"
 import Login from "./views/Login"
 import Register from './views/Register';
 import RecoverPass from './views/RecoverPass';
+import injectContext from "./store/context";
 
 function App() {
   return (
@@ -25,4 +26,4 @@ function App() {
   );
 }
 
-export default App;
+export default injectContext(App);

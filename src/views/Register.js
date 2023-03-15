@@ -1,7 +1,9 @@
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { Context } from "../store/context";
 
 const Register = () => {
-
+        const { store, actions } = useContext(Context)
     return (
         <div className="container mt-4">
             <div 
@@ -11,22 +13,50 @@ const Register = () => {
                     <form>
                         <div className="row d-flex justify-content-around p-2">
                             <div className="form-outline mb-4 col-6">
-                                <input type="text" id="form2Example1" className="form-control" />
-                                <label className="form-label" for="form2Example1">Name</label>
+                                <input 
+                                onChange={actions.handleChange}
+                                type="text" 
+                                id="name"
+                                name="name"
+                                className="form-control" />
+                                <label 
+                                className="form-label" 
+                                htmlFor="name">Name</label>
                             </div>
                             <div className="form-outline mb-4 col-6">
-                                <input type="text" id="form2Example1" className="form-control" />
-                                <label className="form-label" for="form2Example1">Last name</label>
+                                <input 
+                                onChange={actions.handleChange}
+                                type="text" 
+                                id="lastName"
+                                name="lastName" 
+                                className="form-control" />
+                                <label 
+                                className="form-label" 
+                                htmlFor="lastName">Last name</label>
                             </div>
                         </div>
                         <div className="row d-flex justify-content-around p-2">
                         <div className="form-outline mb-4 col-6">
-                            <input type="email" id="form2Example1" className="form-control" />
-                            <label className="form-label" for="form2Example1">Email</label>
+                            <input 
+                            onChange={actions.handleChange}
+                            type="email" 
+                            id="email"
+                            name="email"
+                            className="form-control" />
+                            <label 
+                            className="form-label" 
+                            htmlFor="email">Email</label>
                         </div>
                         <div className="form-outline mb-4 col-6">
-                            <input type="password" id="form2Example2" class="form-control" />
-                            <label className="form-label" for="form2Example2">Password</label>
+                            <input 
+                            onChange={actions.handleChange}
+                            type="password" 
+                            id="password"
+                            name="password"
+                            className="form-control" />
+                            <label 
+                            className="form-label" 
+                            htmlFor="password">Password</label> 
                         </div>
                         </div>
 

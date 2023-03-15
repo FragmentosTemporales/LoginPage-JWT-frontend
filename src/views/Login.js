@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Context } from "../store/context";
 
 const Login = () => {
-
+    const { store, actions } = useContext(Context)
     return (
         <div className="container mt-4">
             <div 
@@ -10,12 +12,26 @@ const Login = () => {
                 <div className="m-4">
                     <form>
                         <div className="form-outline mb-4">
-                            <input type="email" id="form2Example1" className="form-control" />
-                            <label className="form-label" for="form2Example1">Email</label>
+                            <input 
+                            onChange={actions.handleChange}
+                            type="email" 
+                            id="email"
+                            name="email"
+                            className="form-control" />
+                            <label 
+                            className="form-label" 
+                            htmlFor="email">Email</label>
                         </div>
                         <div className="form-outline mb-4">
-                            <input type="password" id="form2Example2" class="form-control" />
-                            <label className="form-label" for="form2Example2">Password</label>
+                            <input 
+                            onChange={actions.handleChange}
+                            type="password" 
+                            id="password"
+                            name="password"
+                            class="form-control" />
+                            <label 
+                            className="form-label" 
+                            htmlFor="password">Password</label>
                         </div>
 
                         <div className="text-center">
