@@ -1,11 +1,13 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/context";
 
 const Register = () => {
-        const { store, actions } = useContext(Context)
+        const { actions } = useContext(Context)
     return (
-        <div className="container mt-4">
+        <div 
+        style={{ borderRadius: '5px', minHeight: '100vh' }}
+        className="container mt-4">
             <div 
             style={{ borderRadius: '5px' }}
             className="border border-dark shadow-lg m-4">
@@ -21,7 +23,7 @@ const Register = () => {
                                 className="form-control" />
                                 <label 
                                 className="form-label" 
-                                htmlFor="name">Name</label>
+                                htmlFor="name">Nombre</label>
                             </div>
                             <div className="form-outline mb-4 col-6">
                                 <input 
@@ -32,7 +34,7 @@ const Register = () => {
                                 className="form-control" />
                                 <label 
                                 className="form-label" 
-                                htmlFor="lastName">Last name</label>
+                                htmlFor="lastName">Apellido</label>
                             </div>
                         </div>
                         <div className="row d-flex justify-content-around p-2">
@@ -45,7 +47,7 @@ const Register = () => {
                             className="form-control" />
                             <label 
                             className="form-label" 
-                            htmlFor="email">Email</label>
+                            htmlFor="email">Correo</label>
                         </div>
                         <div className="form-outline mb-4 col-6">
                             <input 
@@ -56,15 +58,15 @@ const Register = () => {
                             className="form-control" />
                             <label 
                             className="form-label" 
-                            htmlFor="password">Password</label> 
+                            htmlFor="password">Contraseña</label> 
                         </div>
                         </div>
 
                         <div className="text-center">
-                            <button type="button" className="btn btn-primary btn-block mb-4">Submit</button>
+                            <button type="button" className="btn btn-primary btn-block mb-4">Enviar</button>
                         </div>
                         <div className="text-center">
-                            <p>A member? <Link to="/Login">Login</Link></p>
+                            <p>¿Ya eres miembro? <Link to="/Login">Ingresa</Link></p>
                         </div>
                     </form>
                 </div>

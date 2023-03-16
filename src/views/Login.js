@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { Context } from "../store/context";
 
 const Login = () => {
-    const { store, actions } = useContext(Context)
+    const { actions } = useContext(Context)
     return (
-        <div className="container mt-4">
+        <div 
+        style={{ borderRadius: '5px', minHeight: '100vh' }}
+        className="container mt-4">
             <div 
             style={{ borderRadius: '5px' }}
             className="border border-dark shadow-lg m-4 p-2">
@@ -20,7 +22,7 @@ const Login = () => {
                             className="form-control" />
                             <label 
                             className="form-label" 
-                            htmlFor="email">Email</label>
+                            htmlFor="email">Correo</label>
                         </div>
                         <div className="form-outline mb-4">
                             <input 
@@ -31,17 +33,17 @@ const Login = () => {
                             class="form-control" />
                             <label 
                             className="form-label" 
-                            htmlFor="password">Password</label>
+                            htmlFor="password">Contraseña</label>
                         </div>
 
                         <div className="text-center">
-                        <button type="button" className="btn btn-primary btn-block mb-4">Sign in</button>
+                        <button type="button" className="btn btn-primary btn-block mb-4">Ingresa</button>
                         </div>
                         <div className="text-center">
-                            <p><Link to="/recoverpass">forgot your password?</Link></p>
+                            <p><Link to="/recoverpass">¿Olvidaste tu contraseña?</Link></p>
                         </div>
                         <div className="text-center">
-                            <p>Not a member? <Link to="/Register">Register</Link></p>
+                            <p>¿No eres miembro aún? <Link to="/Register">Regístrate</Link></p>
                         </div>
                     </form>
                 </div>
