@@ -20,7 +20,7 @@ const RecoverPass = () => {
                             <button type="button" className="btn btn-primary btn-block mb-4">Enviar</button>
                         </div>
                         <div className="text-center">
-                            <p><Link to="/home">Volver al Inicio</Link></p>
+                            <p><Link to="/">Volver al Inicio</Link></p>
                         </div>
                     </form>
                 </div>

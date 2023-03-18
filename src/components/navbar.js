@@ -1,13 +1,12 @@
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPaw, faAddressCard, faRightToBracket, faHouse } from '@fortawesome/free-solid-svg-icons'
+import { faPaw, faAddressCard, faRightToBracket, faHouse, faInfo } from '@fortawesome/free-solid-svg-icons'
 
 const NavBar = () => {
 
   const pawn = <FontAwesomeIcon icon={faPaw} />
   const register = <FontAwesomeIcon icon={faAddressCard} />
   const login = <FontAwesomeIcon icon={faRightToBracket} />
-  const home = <FontAwesomeIcon icon={faHouse} />
 
   return (
     <div>
@@ -18,17 +17,12 @@ const NavBar = () => {
             AdoptaPet {pawn}
             </button>
             <ul className="dropdown-menu">
-              <li><Link className="dropdown-item" to="/home">Inicio</Link></li>
-              <li><Link className="dropdown-item" to="/info">Información</Link></li>
-              <li><Link className="dropdown-item" to="/register">Registro</Link></li>
+              <li><Link className="dropdown-item" to="/">Inicio</Link></li>
               <li><Link className="dropdown-item" to="/login">Ingresa</Link></li>              
+              <li><Link className="dropdown-item" to="/dogs">Perros</Link></li>              
+              <li><Link className="dropdown-item" to="/cats">Gatos</Link></li>              
+              <li><Link className="dropdown-item" to="/others">Otras mascotas</Link></li>              
             </ul>
-          </div>
-          <div>
-            <Link className="nav-link text-white" to="/Home">{home} Inicio</Link>
-          </div>
-          <div>
-            <Link className="nav-link text-white" to="/Register">{register} Registro</Link>
           </div>
           <div>
             <Link className="nav-link text-white" to="/Login">{login} Ingresa</Link>

@@ -1,16 +1,17 @@
+import Cards from "../components/cards";
+import Jumbotron from "../components/jumbotron";
+import News from "../components/news";
+
 const Home = () => {
 
-    return(
-<div
-style={{ borderRadius: '5px', minHeight: '100vh' }}
->
-    <div 
-    style={{ borderRadius: '5px' }}
-    className="text-center m-4 p-4 border border-dark shadow-lg">
-    <h1>¡Bienvenido a AdoptaPet!</h1>
-    </div>
-
-</div>
+    return (
+        <div
+            style={{ borderRadius: '5px', minHeight: '100vh' }}
+        >
+            <Jumbotron/>
+            <Cards/>
+            <News/>
+        </div>
     )
 }
 export default Home;
