@@ -20,6 +20,9 @@ const Card = () => {
                         <h4>Género:</h4>
                         <h4>Tamaño:</h4>
                         <p>Breve descripción de la mascota</p>
+                        <Link 
+                        to="/others"
+                        className="btn btn-primary">Mira su ubicación</Link>
                     </div>
                 </div>                                
             </div>

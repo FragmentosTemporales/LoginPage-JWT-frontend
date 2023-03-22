@@ -15,6 +15,9 @@ import Card from './components/card';
 import Dogs from './components/dogs';
 import Cats from './components/cats';
 import Others from './components/others';
+import User from './components/user';
+import AddPet from './views/AddPet';
+import AddPost from './views/AddPost';
 
 function App() {
   return (
@@ -28,8 +31,12 @@ function App() {
           <Route path="/dogs" element={<Dogs />} />
           <Route path="/cats" element={<Cats />} />
           <Route path="/others" element={<Others />} />
-          <Route path="/recoverpass" element={<RecoverPass />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/recoverpass" element={<RecoverPass />} />
+          <Route path="/user" element={<User />} />
+          <Route path="/addpet" element={<AddPet />} />
+          <Route path="/addpost" element={<AddPost />} />
+
         </Routes>
         <Footer />
       </BrowserRouter>
